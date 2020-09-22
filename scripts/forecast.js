@@ -27,13 +27,13 @@ const getCity = async (city) => {
   return data[0]; //! Returns a promise, thus we need to  consume the promise.
 };
 
-getCity("manchester")
-  .then((data) => {
-    return getWeather(data.Key);
-  })
-  .then((data) => {
-    console.log(data);
-  })
-  .catch((err) => console.log(err));
+// getCity("manchester")
+//   .then((data) => {
+//     return getWeather(data.Key);
+//   })
+//   .then((data) => {
+//     console.log(data);
+//   })
+//   .catch((err) => console.log(err));
 
-//! data recieved from getcity fn is used as an arg for getWeather, its returned as a promise which is consumed using then and logged into console
+// //! data recieved from getcity fn is used as an arg for getWeather, its returned as a promise which is consumed using then and logged into console
