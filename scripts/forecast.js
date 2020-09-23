@@ -1,9 +1,8 @@
-const key = "YfLBfLhjCXTfPathZBnDuRnidSHRyzzA"; //! API endpoint
+const key = "	asjp8KydBjDHjFlrVe0wNsfGRyXASJvQ"; //! API endpoint
 
-//?get weather info
+// get weather information
 const getWeather = async (id) => {
   const base = "http://dataservice.accuweather.com/currentconditions/v1/";
-
   const query = `${id}?apikey=${key}`;
 
   const response = await fetch(base + query);
@@ -12,19 +11,15 @@ const getWeather = async (id) => {
   return data[0];
 };
 
-//? get city info
+// get city information
 const getCity = async (city) => {
   const base = "http://dataservice.accuweather.com/locations/v1/cities/search";
-
-  //! Tgis is the base link we call for fetching thedetails of a city
-
   const query = `?apikey=${key}&q=${city}`;
 
   const response = await fetch(base + query);
-
   const data = await response.json();
 
-  return data[0]; //! Returns a promise, thus we need to  consume the promise.
+  return data[0];
 };
 
 // getCity("manchester")
